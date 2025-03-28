@@ -1,2 +1,2 @@
-# superconducting_qubit_3
-My third research internship on Superconducting qubits at UNICAMP
+# Third research internship at LFDQ (quantum devices physics laboratory) UNICAMP
+On this internship I measured  physical transmon superconducting qubits devices to caracterize their decoherence through finding estimates to their $T_1$ and $T_2$. I also simulated the procedures of measurement to deepen my understanding of them and pinpoint effects of faults of the system like noise on the results of the caracterization.
