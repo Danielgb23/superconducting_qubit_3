@@ -3,9 +3,11 @@ On this internship I measured  physical transmon superconducting qubits devices 
 
 You can read the partial report of the first semester [here](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_G_Benvenutti_partial_report.pdf). The partial report has more details on each measurement on the physical device that I had to take out of the final report because of the size constraints.
 
-The TIIQx folders have the data and the notebooks used for the measurment (Measurement_pulsado.ipynb and Measurement_vna.ipynb) of each qubit sample I characterized on this internship as well as the notebook to generate the graphs for my report using this data (Qx Load_files.ipynb). The pyvisa scripts used in these notebooks to control the equipment can be found at the [laboratory's github](https://github.com/Rouxinol-Research-Lab/MeasurementsLFDQ).
+The TIIQx folders have the data and the notebooks used for the measurment (Measurement_pulsado.ipynb and Measurement_vna.ipynb) of each qubit sample I characterized on this internship as well as the notebook to generate the graphs for my report using this data (Qx Load_files.ipynb). The pyvisa scripts used in these notebooks to control the equipment can be found at the [laboratory's github](https://github.com/Rouxinol-Research-Lab/MeasurementsLFDQ). There's also [my fork](https://github.com/Danielgb23/MeasurementsLFDQ/tree/main) with some modifications.
 
-The notebooks for the simulations are [measurement procedure with collapse operators](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel-simulation-qubit.ipynb) where I simulate the process of caracterizing the qubit's relaxation and dephasing gaining insights on it and [noisy drive decoherence effects](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_drive_noise.ipynb) where I pinpoint the effects of a noisy drive on the qubit.
+
+
+The notebooks for the simulations are [measurement procedure with collapse operators](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel-simulation-qubit.ipynb) where I simulate the process of caracterizing the qubit's relaxation and dephasing gaining insights on it and [noisy drive decoherence effects](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_drive_noise.ipynb) where I pinpoint the effects of a white background noise noise on the drive of the qubit.
 
 ## Samples from the work done:
 ### Simulation Rabi map:
