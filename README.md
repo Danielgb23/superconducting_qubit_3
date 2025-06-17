@@ -7,7 +7,12 @@ The TIIQx folders have the data and the notebooks used for the measurment (Measu
 
 
 
-The notebooks for the simulations are [measurement procedure with collapse operators](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel-simulation-qubit.ipynb) where I simulate the process of caracterizing the qubit's relaxation and dephasing gaining insights on it and [noisy drive decoherence effects](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_drive_noise.ipynb) where I pinpoint the effects of a white background noise noise on the drive of the qubit.
+I also made several simulations exploring the effects of different types of noise on the qubit drive. The notebooks for the simulations are:
+- [Measurement procedure with collapse operators](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel-simulation-qubit.ipynb) where I simulate the process of caracterizing the qubit's relaxation and dephasing gaining insights on it.
+- [Noisy drive decoherence effects](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_drive_noise.ipynb) where I pinpoint the effects of a white background noise noise on the drive of the qubit.
+- [Phase noise simulation](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_phase_noise.ipynb)  where I explore the effects of noise on the phase parameter of a sine like drive signal.
+- [Amplitude modulated low frequency noise](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_qubit_am_noise.ipynb)  where I amplitude modulate (multiply) low frequency noise like pink and brownian noise with a qubit resonance drive signal carrier.
+- [Dephasing by noise simulation](https://github.com/Danielgb23/superconducting_qubit_3/blob/main/Daniel_simulation_dephasing.ipynb)  A more rigorous simulation to get a clearer picture of the effects of drive noise on dephasing.
 
 ## Samples from the work done:
 ### Simulation Rabi map:
