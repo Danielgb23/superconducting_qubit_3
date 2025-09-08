@@ -1,0 +1,324 @@
+\documentclass[12pt,onecolumm,a4paper]{article}
+\usepackage[textheight=9in,footskip=2pt]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+%\usepackage{tipa}%for \textchi etc
+\usepackage{ifpdf,newtxtext,newtxmath} 
+\usepackage{ amsmath, amssymb }
+\usepackage{xcolor}
+\usepackage{array,graphicx,dcolumn,multirow,hevea,abstract,hanging,fancyhdr,float}
+% change next 3 lines each issue
+\newcommand{\jdate}{January 2021}
+\topmargin=-.3in \oddsidemargin=.3in \evensidemargin=.3in \textheight=9in \textwidth=6in
+\pagestyle{fancy} 
+\fancyhead[L]{\protect\small \href{\jref}{\jhead}, \jdate}
+\fancyhead[R]{\protect\small SHORT TITLE} % replace with running head
+\fancypagestyle{firstpage}{%
+ \lhead{\protect\small \href{\jref}{\jhead}, \jdate}
+ \rhead{}
+}
+\usepackage[labelfont=sc,textfont=sf]{caption}
+\usepackage[urlcolor  = blue, colorlinks = true,linkcolor = blue,hyperfootnotes=false,breaklinks=true]{hyperref} % was dvipdfmx
+% \usepackage[hyperfootnotes=false,breaklinks=true,linkbordercolor={1 1 1},citebordercolor={1 1 1}]{hyperref}
+% \usepackage{natbib} % must come afer hyperfootnotes, use 2nd version for bibtex
+% \setlength{\bibsep}{0pt}
+\usepackage[
+backend=bibtex,
+style=nature,
+fontsize=10pt,
+sorting=none
+]{biblatex}
+\addbibresource{references.bib}
+
+\pagestyle{fancy}
+\pagenumbering{gobble}
+\urlstyle{rm}
+\usepackage[hyphenbreaks]{breakurl}
+% DO NOT USE ADDITIONAL PACKAGES unless you make sure they work with Hevea.
+% You may define new commands, but these may cause other troubles, so try to avoid it.
+
+% FOR BIBTEX USERS (Bibtex is not recommended, but we can use it):
+% \usepackage{natbib} % must come afer hypperref
+% in references: \bibliographystyle{apalike3} \setlength{\bibsep}{0pt} \bibliography{WHATEVER}
+% download http://journal.sjdm.org/apalike3.bst
+\usepackage{booktabs} % \toprule \midrule \bottomrule \cmidrule(lr){a-b}
+% define centered and ragged columns:
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }p{#1}} % can use m{}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }p{#1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}} % d{3.2} for 3 places on l, 2 on r
+\newcommand{\mc}{\multicolumn}
+\setlength\tabcolsep{1mm}
+\setlength\columnsep{5mm}
+\setlength\abovecaptionskip{1ex}
+\setlength\belowcaptionskip{.5ex}
+\setlength\belowbottomsep{.3ex}
+\setlength\lightrulewidth{.04em}
+\renewcommand\arraystretch{1.2}
+\renewcommand{\topfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{.9}
+% \renewcommand{\baselinestretch}{1.00} \large\normalsize % for fixing spaces
+\widowpenalty=1000
+\clubpenalty=1000
+\setlength{\parskip}{0ex}
+\let\tempone\itemize
+\let\temptwo\enditemize
+\let\tempthree\enumerate
+\let\tempfour\endenumerate
+\renewenvironment{itemize}{\tempone\setlength{\itemsep}{0pt}}{\temptwo}
+\renewenvironment{enumerate}{\tempthree\setlength{\itemsep}{0pt}}{\tempfour}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1} % start with first page
+
+\title{Projeto PIBIC - Estudo de circuitos supercondutores para computação quântica}
+
+% \author{
+% Daniel G. Benvenutti
+% }
+
+
+
+\date{} % leave empty
+ % goes here
+
+% \begin{htmlonly}
+% \href{\jref}{\jhead}, \jdate, pp.\
+% \end{htmlonly}
+\begin{document}
+
+% \maketitle
+\thispagestyle{firstpage}
+
+
+\maketitle
+\noindent
+\textbf{Grande Área de conhecimento}: Ciências Exatas e da Terra\\
+\textbf{Área de Conhecimento}:Física\\
+\textbf{Subárea de Conhecimento}: Física da Matéria Condensada\\
+\textbf{Aluno(a)}:Daniel G. Benvenutti RA: 169448\\
+\textbf{Orientador}: Francisco Rouxinol\\
+\textbf{Instituição}: Instituto de Física Gleb Wataghin, UNICAMP\\
+\textbf{Áreas de enquadramento da proposta}: Pesquisa Básica\\
+\textbf{Áreas de enquadramento CNPq}: Tecnologias Habilitadoras: Materiais Avançados e Nanotecnologia\\
+% \begin{itemize} \setlength\itemsep{0em}
+% \item Tecnologias estratégicas: Cibernética
+% \item 
+% \item Tecnologias de Produção: Comunicações 
+% \end{itemize}
+\textbf{Palavras chaves}: Eletrodinâmica Quântica, Informação e Computação Quântica, Circuitos Supercondutores\\
+
+% \begin{enumerate}
+%     \item Usar o Qiskit metal para projetar chips que serão utilizados em laboratorio ou que tenham valor didático e usar as ferramentas dele para gerar relatórios de performance etc
+%     \item Implementar formas de correção e prevenção de erros no Qiskit ou no qiskit metal
+% \end{enumerate}
+% \title{Desenvolvimento de um dispositivo para computação Quântica utilizando circuitos supercondutores}
+
+% \begin{enumerate}
+% \item Estudo da interação cavidade atomo
+% \item Cavidades coplanares
+% \item transmon
+% \item Simulação da Hamiltoniana
+% \subitem Qutip
+% \item Implementação do circuito
+% \subitem Qiskit Metal
+% \item Simulação do circuito
+% \subitem CST
+% \end{enumerate}
+
+\begin{abstract}
+    Introdução a interação cavidade-átomo; Introdução a física de circuitos supercondutores para computação quântica; Utilização de ferramentas computacionais para desenvolvimentos destes sistemas;
+Estudo da eletrodinâmica de cavidades em circuitos planares; Simulação de circuitos; 
+\end{abstract} 
+
+
+\section{Introdução}
+%Histórico
+%Importância
+%Onde o projeto se encaixa
+Na Conferência de Física da Computação do MIT de 1981 Feymann disse:\cite{Feynman1982SimulatingComputers} "\textit{ . . . trying to find a computer simulation of physics seems to me to be an excellent program to follow out. . . . the real use of it would be with quantum mechanics. . . . Nature isn’t classical . . . and if you want to make a simulation of Nature, you’d better make it quantum mechanical, and by golly it’s a wonderful
+problem, because it doesn’t look so easy}." Esta citação descreve um dos campos de pesquisa mais revolucionários da física moderna, da engenharia e da ciência de computação, prometendo ser capaz de resolver uma categoria de problemas computacionais que um computador clássico jamais poderia \cite{Nielsen2010QuantumInformation}. 
+A chave para construir esse dispositivo será implementar e controlar bits quânticos (qubits, sistemas quânticos de dois níveis mecânicos) de maneira escalável. Várias abordagens foram adotadas na criação de diferentes realizações de qubits, como átomos de Rydberg, spins de elétrons, fótons, ou circuitos supercondutores baseados na junção Josephson \cite{Clarke2008SuperconductingBits}. 
+
+Em particular, nos últimos anos houve um grande progresso no desenvolvimento de circuitos quânticos em pequena escala compreendendo vários bits quânticos (qubits)[]. Contudo,  um computador quântico tolerante a falhas que exceda o desempenho das máquinas clássicas existentes atualmente exigirá uma rede de milhares ou milhões de qubits, muito além da tecnologia atual []. Deste modo, o conhecimento robusto das técnicas de controle e medição de máquinas quânticas é essencial para o entendimento destas novas tecnologias.
+
+Com este objetivo em mente, este projeto de iniciação científica tem como objetivo o estudo de técnicas de controle, medição de estados quânticos de um qubit formado a partir de elementos de circuitos supercondutores. O projeto envolverá o estudo teórico dos vários dispositivos e conceitos fundamentais de tecnologias quânticas, assim como a simulação e técnicas de fabricação destes sistemas.
+
+\section{Objetivos}
+O objetivo principal deste projeto é \textbf{levar o estudante a estudar os principais elementos utilizados em computação quântica}, e relacionar estes novos conhecimentos com os conceitos fundamentais de eletromagnetismo, eletrônica, computação e mecânica quântica que foram aprendidos em seu curso. O \textbf{objetivo especifico} deste projeto é o \textbf{estudo experimental dos principais elementos que compões um circuito supercondutor baseado em junções Josephson}, de forma a formar uma base sólida dos principais elementos de hardware utilizados para nesta tecnologia.  O \textbf{objetivo a longo prazo} deste projeto é utilizar o aprendizado adquirido para formar uma base sólida do funcionamento de \textbf{tópicos avançados do hardware utilizado nestas tecnologias e prepará-los para o desenvolvimento de projetos mais avançados neste fascinante campo de pesquisa.} 
+É importante salientar que o estudante já desenvolveu com sucesso um projeto de iniciação científica (PIBIC NúmeroXXXXX) para o desenvolvimento de um projeto de computação quântica onde simulou e executou numa das máquinas da IBM dispostas na nuvem alguns algoritmos quânticos como o algoritmo de Shor e de Grover. Além disso, no momento o discente esta estudando vários dos temas relacionados a computação quântica,  e ainda fazendo as disciplinas de Mecânica Quântica do IFGW, que não são especificas para seu curso.
+% Circuitos supercondutores são uma das principais apostas na atualidade para a construção de um computador quântico, sendo importante para os estudantes de engenharia, física, matemática e computação compreenderem os principais elementos utilizados nestes circuitos.
+
+
+\section{Metodologia}
+Circuitos supercondutores são dispositivos elétricos metálicos baseados no efeito Josephson, que perdem toda a resistência elétrica em temperaturas criogênicas. Suas supercorrentes tornam-se então quantizadas e permitem a realização de bits quânticos (qubits). Esses qubits possuem dipolos elétricos, que se acoplam fortemente aos modos eletromagnéticos em ressonadores supercondutores. Além disso, estes circuitos elétricos podem ser construídos utilizando técnicas de micro e nanofabricação utilizadas em chips de computadores clássicos, combinando diferentes \textit{building blocks} em diferentes configurações.
+
+% Neste projeto vamos estudar os principais elementos utilizados no desenvolvimentos das principais arquiteturas de computação quântica com circuitos supercondutores. Além disso, também vamos aprender quais as principais técnicas de controle e leituras de estados quânticos de qubits e cavides e como diferentes graus de liberdade destes sistemas podem ser emaranhados.
+
+
+
+Nosso primeiro passo será o estudo da quantização de circuitos elétricos. Utilizando os  principais elementos empregados em computação quântica: resistores, capacitores e indutores,  bem conhecidos nas tecnologias clássicas, vamos desenvolver a teoria básica para descrever o comportamentos destes dispositivos no regime quântico. Também vamos introduzir um novo elemento supercondutor, a Junção Josephson, e descrever suas características de funcionamento. 
+Utilizando estes elementos, vamos construir os principais circuitos elétricos necessários para a elaboração dos primeiros sistemas para realização de operações para computação quântica.
+
+
+Nas seções abaixo, detalhamos os principais elementos que vamos desenvolver durante este projeto para construção de um chip para computação quântica com um qubit.
+
+\subsection{Supercondutividade}
+Neste projeto não vamos entrar nos detalhes microscópicos da teoria de supercondutores. Vamos focar no entendimento fenomenológico necessário para o entendimento do funcionamento das junções Josephson e dos principais elementos utilizados em circuitos supercondutores.
+
+
+
+\subsection{Oscilador Quântico LC}
+Ressonadores são um dos principais elementos para manipular e medir qubits supercondutores com alta eficiência \cite{Blais2004CavityComputation}. O circuito oscilador com a dinâmica mais simples é o LC. No limite de elementos discretos, onde o tamanho do capacitor e indutor é muito menor que o comprimento de onda do sistema, podemos escrever a Lagrangiana que descreve a dinâmica do circuito como:
+
+\begin{equation}
+\label{lagrangiana}
+L = \frac{1}{2}LI^2 - \frac{1}{2}\frac{q^2}{C} 
+\end{equation}
+
+onde, \(I\) é a corrente no indutor e \(q\) a carga no capacitor, ver figuraXXX (Colocar figura Circuito LC). Utilizado as técnicas usuais para quantização e alguma álgebra é possível mostrar a Hamiltoniana descrevendo o comportamento de um circuito LC pode ser descrita por um oscilador harmônico quântico:
+
+\begin{equation}
+    H = \frac{\hbar \omega_{LC}}{2} \left( \hat{a}^\dagger\hat{a} + \frac{1}{2}\right) 
+\end{equation} 
+onde \(\omega_{LC}=1/\sqrt{LC}\) e \(\hat{a}\), \((\hat{a}^\dagger)\) é o operador destruição (criação). 
+
+Com o entendimento dos fundamento básicos do circuito \(LC\) vamos iniciar o estudo do comportamento de circuitos mais complexos, introduzindo novos elementos e aumentando a complexidade do sistema. Vamos iniciar estes estudos introduzindo uma fonte de sinal em no circuito \(LC\) e a dinâmica destes sistemas neste regime. Na etapa seguinte, vamos estudar o acoplamento entre dois circuitos \(LC\) e terminaremos com o estudo de uma cavidade distribuída coplanar, ver figura \ref{fig:1}
+% \FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=4in]{Imagens/esquema_cpw.png}
+    \caption{a) Perfil do campo elétrico no ressonador CPW; b) Canal inserido na linha de transmissão do ressonador CPW; c) Corte normal do ressonador CPW.}
+    \label{fig:1}
+\end{figure}
+
+\subsection{Junção Josephson}
+Uma junção Josephson consiste de dois eletrodos supercondutores separados por uma pequena barreira não supercondutora. Devido pequenas dimensões da barreira, em algumas condições de trabalho, os elétrons podem tunelar pela barreira. O efeito Josephson descreve o comportamento da supercorrente \(I_J\) pela junção por:
+
+\begin{equation}
+    I_J = I_0 \sin{\varphi}\\
+    V = \frac{\Phi_0}{2\pi}\frac{d\varphi}{dt}
+\end{equation}
+
+Nele o aluno vai dominar as técnicas de fabricação computacionais e projeto de um chip para computação quânticas com circuitos supercondutores.
+
+No fim desse projeto o aluno será capaz de participar ativamente das atividades em um laboratório que desenvolve um computador quântico de supercondutor  assim como terá algum preparo para outras modalidades de qubit.
+
+\subsection{Trabalhos anteriores} 
+
+
+Inicialmente o aluno fez em python a simulação dos qubits numa máquina clássica. Onde cada qubit é uma superposição dos estados $|0\rangle$ ou $|1\rangle$ descrita por $\Psi=a|0\rangle+b|1\rangle$ onde a e b são complexos e $\Psi$ é normalizado ($|a|^2+|b|^2=1$). a e b representam as amplitudes de probabilidade de cada estado onde as probabilidades de medir 0 ou 1 são $|a|^2$ e $|b|^2$ respectivamente. Nesses qubits foi implementada inicialmente a porta de Hadamard, que é responsável por fazer por exemplo a superposição a partir de um estado puro ($|0\rangle$ ou $|1\rangle$) do qubit que resulta em $\Phi=1/\sqrt{2}|0\rangle$+ 1/\sqrt{2}$|1\rangle$ . Todas as portas têm suas matrizes características. A de Hadamard é 
+\begin{equation}
+H=\frac{1}{\sqrt{2}}\begin{bmatrix}
+1 & 1 \\
+1 & -1\\
+\end{bmatrix}
+\end{equation}
+
+
+Também foram implementadas outras portas como a de mudança de fase que multiplica o componente $b|1\rangle$ por $e^{i\theta} $ adicionando $\theta$ radianos na sua fase complexa. Note que não é usual uma porta que mude a fase de $a|1\rangle$ porque o que interessa é a diferença de fase entre os componentes. Uma fase universal não é mensurável. A fase complexa não interfere na medida final $|b|^2$ por exemplo mas ela tem uma papel durante a fase computacional onde a fase é a diferença entre dois componentes de uma função de onda se somarem ou até se anularem. Isso tem papel fundamental no algoritmo de Grover. 
+
+Para usar mais de um qubit, cada um com dois estados, no nosso sistema basta fazer o produto tensorial das funções de onda de cada um para obter a função total $\Psi_{tot}= \Psi_1\otimes\Psi_2$. Logo $\Psi$ nesse caso é um vetor de 4 elementos ($2\times2=2^2$). A função de onda de N qubits é um vetor de complexos normalizado de $2^N$ elementos e produto tensorial das funções dos N qubits. Um elemento desse $\Psi_{tot}$ de 3 qubits seria representado por exemplo por $|010\rangle$. Onde o primeiro zero representa o primeiro qubit no estado 0 o 1 representa o segundo qubit no estado 1 e assim por diante. Outro exemplo seria $\frac{1}{\sqrt{2}}|000\rangle+\frac{1}{\sqrt{2}}|111\rangle$. Aqui temos a superposição de dois estados possíveis para um sistema de 3 qubits, esse é o famoso estado de gato.
+
+A outra porta fundamental na simulação é a porta C-NOT ou Not controlada. Ela é uma porta de dois qubits e funciona da seguinte maneira. Se o qubit de controle for 1 ela inverte o outro qubit, se não, ela o deixa como estava.  Com essas portas já se pode começar a fazer os algoritmos.
+
+O Algoritmo de Grover é um algoritmo de busca. Um algoritmo de busca regular levaria no pior dos casos $O(N)$ consultas para encontrar um resultado em uma base de dados com N elementos (iria percorrer as lista inteira). Já o algoritmo de Grover levaria $O(\sqrt{N})$ consultas que é uma aceleração considerável. Isso é possível por que o algoritmo faz uma busca com a superposição de todas as entradas possíveis. E amplifica a resposta em cada iteração diminuindo as respostas falsas.
+
+\href{https://codepen.io/samtonetto/full/BVOGmW}{Aqui há uma visualização do algoritmo.} O número de interações de Grover necessárias é $\frac{\pi}{4}\sqrt{2^{N_{\textrms{qubits}}}}$ arredondado para baixo. Logo para 3 qubits $3.14\sqrt{2^\textbf{3}}/4\approx 2.22 \approx 2$ 
+
+Ele é construído com uma superposição de todos os qubits no início seguido do operador oráculo e depois do operador de difusão de Grover que amplifica a amplitude da resposta. O oráculo e operador de difusão de Grover são repetidos $3.14\sqrt{2^\textbf{N}}$ Vezes arrendondado para baixo onde $N$ é o número de qubits.
+
+Para implementar o algoritmo de Grover no computador da IBM houve problemas com o Oráculo e um dos operadores dentro do operador de difusão que não passa de um oráculo para o valor nulo ($|\ldots000\rangle$). A maneira mas simples de implementar o oráculo seria com uma porta Z controlada por todos os qubits da computação. A porta Z é uma porta de fase com fase $\pi$ ou seja inverte o $b$ para $-b$ de um qubit. Dessa forma a porta controlada vai inverter sempre o componente $|\ldots111\rangle$ da função de onda de entrada que seria a resposta porque ela precisa que todos os qubits sejam 1 para inverter a fase. Para inverter outros componentes basta colocar portas inversoras X antes de depois do qubit que se deseja que seja 0. X troca de lugar $a$ e $b$ logo $X(a|0\rangle+b|1\rangle)=(b|0\rangle+a|1\rangle)$. Assim podemos inverter somente $|010\rangle$ de um sistema de 3 qubits por exemplo. X antes da Z controlada no primeiro e terceiro qubit. Mas as portas Z controladas para mais qubits não estão a disposição na interface qiskit da IBM e devem ser desenvolvidas manualmente.
+
+O algoritmo de Shor é um algoritmo de fatoração. Dado um número por exemplo 15 e executando o algoritmo em uma máquina clássica com um dos passos feitos na máquina quântica obtemos 2 fatores desse número (3 e 5). Abaixo os passos do algoritmo:
+
+Dado um número $C$ que se deseja encontrar os fatores:
+
+\begin{enumerate}
+
+ \item Cheque se $C$ é impar e não é potência de algum inteiro pequeno. Se for um desses encontramos um fator de $C$ e terminamos.
+
+ \item Pegue qualquer inteiro no intervalo $1 < a < C$.
+
+ \item Encontre o $mdc(a, C)$ (maior divisor comum). Se o mdc for maior que 1 por sorte, encotramos ja um fator de C e terminamos.
+
+ \item Encontre o menor inteiro $p$ tal que $a^{p} \equiv 1\, mod\, C$. A expressão  $p \equiv q \, mod\, C$ quer dizer a congruência modular. Ou seja $p-q$ é um inteiro multiplo de C. Isso pode ser escrito também como $p\, mod\, C = q\, mod\, C$.
+
+ \item Se $p$ é impar ou se $p$ é par e $a^{p/2} \equiv -1\, mod\, C$ volte para 2 e escolha um novo $a$.
+
+ \item Os números $P_{\pm} = mdc( a^{p/2} \pm 1, C)$ são fatores não triviais de C.
+
+\end{enumerate}
+
+O computador quântico é responsável pelo 4º passo desse algoritmo. O resto dos passos como encontrar o mínimo divisor comum (mdc) são feitos rapidamente em um computador clássico.
+
+Esse passo se chama encontrar o período pois $f(x)=a^{x} \, mod \, C$ é uma função periódica com período $p$. Dividimos o registrador quântico em duas partes: o registrador $x$ com $L$ qubits iniciado em $|0...0\rangle$ e o $f$ com $M$ qubits iniciado em $|0...01\rangle$:
+
+O quarto passo:
+
+
+\begin{enumerate}
+\item Aplique portas de Hadamard em todos os L qubits do registrador $x$, representado por $H^{\otimes L}$. Isso coloca o registrador $x$ numa superposição de todos os $2^{L}$ estados possíveis
+
+\item Multiplique o registrador $f$ por $a^{x} \, mod \, C$ fazendo com que fique com o valor de $f(x)$.
+
+\item Meça o registrador $f$ (esse passo é opcional)
+
+\item Faça uma transformada de Fourier quântica inversa (IQFT em inglês) no registrador $x$. A IQFT permite encontrar o período da função.
+
+\item Meça a saída $\bar{x}$ de do IQFT (lembrando que temos que ler a saída do IQFT na direção contrária).  Shor provou que $\bar{x}/2^{L}$ é igual a aproximadamente $s/p$ onde $s$ é um inteiro qualquer. Usamos isso para encontrar $p$. Por exemplo $\bar{x}/2^{L} = 0.32 \cong 1/3 = 2/6 = 3/9$ então $p$ é $3, 6, 9, \cdots$ Checamos em seguida esses valores para ver se $a^{p} \equiv 1\, mod\, C$.
+
+\end{enumerate}
+
+Obtemos os fatores no 6º passo com o período $p$ que vem da parte quântica do algoritmo. O circuito do algoritmo de Shor desse passo inicia como o de Grover com uma superposição, mas apenas em parte dos qubits utilizados ( o expoente). O registrador $f$ é colocado no estado 1 em binário $|\ldots0001\rangle$ e em seguida é feita uma multiplicação por $a^{x} \, mod \, C$ onde $x$ é o registrador em superposição e expoente. Ela é obtida com portões quânticos controlados combinados com outros. Mas no caso da simulação usamos N portões com N sendo o número de qubits do registrador $x$. E cada portão é uma matriz calculada para esse propósito.
+
+Desse modo se aproveitamos das propriedades dos expoentes que por exemplo $y^{a+b+c}$ é igual a $y^{a}y^{b}y^{c}$ e a de números binários que é $2^2a+2^1b+2^0c$ onde abc são os dígitos binários 1 ou 0, por exemplo 101. Assim nossa função $a^{x} \, mod \, C$ pode ser quebrada em $a^{4x_2} a^{2x_1} a^{x_0} \, mod \, C$ E implementada com portões que implementam essas multiplicações controlados pelo bit respectivo de $x$. Se 1, multiplica, se 0, não multiplica. 
+
+Para executar isso no computador da IBM temos um desafio bem maior por que precisamos descrever essa multiplicação em termos de portas mais fundamentas e não diretamente calculando a matriz e implementando ela no simulador. São utilizadas muitas portas swap controladas que são como as portas CNOT mas dado um qubit controlador ela troca de lugar ou não dois outros qubits. 
+
+Por fim fazemos a transformada de fourier quântica discreta inversa do registrador $x$ que vai nos dar essa função periódica $a^{x} \, mod \, C$ no domínio da frequência (lembrando que a transformada de Fourier e sua inversa são semelhantes).  Com a frequência $(1/p)$ junto com suas harmônicas $s/p$ com $s \in \mathbb{N}$ e $ s<p $. E daí com várias medidas (para encontrar a distribuição) do sistema podemos encontrar o período para continuar o algoritmo. Cada pico encontrado seria uma harmônica (incluindo o 0). E as frequências vão de 0 a 1. Logo o período e simplesmente o número de picos nas medidas finais. De $s=0$ até $s=p-1$.
+% \clearpage
+% \fontsize{\small}{}
+% \setstretch{1}
+\printbibliography
+\eject
+\end{document}
+% \FloatBarrier
+
+
+
+% A computação trouxe vários benefícios bem palpáveis para a humanidade nas últimas décadas. Mas apesar de todo o poder que têm, eles têm limitações como toda obra humana. Uma dessas limitações é na implementação de certos algoritmos como a fatoração de números inteiros em seus componentes primos. Para fatorar um número grande com fatores grandes podemos levar décadas. Tanto que esses números grandes são utilizados na criptografia.
+
+% Mas se utilizarmos computadores quânticos o tempo de resolução do problema é exponencialmente menor. O que se traduz de décadas para algumas horas. Há toda uma classe de algoritmos na computação que podem ser acelerados se o executarmos em um computador quântico. Outro exemplo seria para simular uma molécula ou reação. Que outro lugar melhor para simular um sistema quântico que com um computador desse tipo afinal?
+
+% O problema que encaramos para realizar essas máquinas está no fato de precisarmos de condições frágeis como manter o sistema a 5mK (-273.15°C+0.005°C) para evitar ruídos e a decoerência. Além de ter que controlar e manipular esse sistema. E mais que isso, é difícil atingir um número elevado de bits quânticos, os qubits, elementos fundamentais dessa máquina. Isso no caso do computador quântico de \textbf{supercondutores} que é o relevante para esse projeto assim como também é bem popular. Há outros modelos como o de íon aprisionado que têm seus próprios desafios, muitos deles similiares, mas eles não serão abordados aqui.
+
+
+
+
+%cavidades, qubits, computação quantica, simuladores, 
+
+% O projeto começará com o estudo de cavidades onde serão presas ondas eletromagnéticas que interagem com o circuito supercondutor. Essas cavidades são feitas de vácuo com o entorno de um material condutor onde o campo elétrico da onda é nulo. Logo a cavidade e análoga à um poço com potencial de barreira infinito. Calculando a Hamiltoniana desse campo eletromagnético preso vemos que se trata de um oscilador harmônico quântico com número quântico $n$ correspondente ao número de fótons aprisionados.
+
+% O qubit supercondutor (transmon), que é a segunda parte a ser estudade, é inserido no meio dessa cavidade e tem uma dimensão pequena comparada a ela. Logo interage pelo seu momento de dipolo elétrico com uma parte pontual do campo elétrico da cavidade (campo no meio da cavidade ou em L/2). O qubit transmon é constituído de uma junção supercondutora de Josephson que a da um caráter não linear e capacitores o que resulta em um oscilador harmonico não linear. Também será estudada a fabricação desses componentes (a cavidade e o qubit).
+
+% Em seguida será estudada a interação entre a cavidade e o qubit de forma que possamos controlar o qubit e seus estados assim como medi-los. Terminado isso podemos fazer a simulação desse sistema cavidade-qubit no qutip que é uma ferramenta para simular sistemas quânticos. Assim como a implementação desses conhecimentos no projeto de um chip com 3 qubits no qiskit metal. Que é uma ferramenta de desenvolvimento de chips supercondutores para computadores quânticos feita pela IBM. E por fim esse circuito será simulado no CST que simula sistemas eletromagnéticas em 3D.
+
+% \ask{Eu olhei o Naghilo de novo para fazer essa parte da metodologia e estava bem mais fácil de entender}
+
+
+% \section{Objetivos}
+% %Estudo das tecnologias utilizadas em computação quântica com circuitos supercondutores.
+
+% O objetivo desse projeto é fazer com que o aluno entenda o funcionamento de um qubit de supercondutores e suas partes fundamentais assim como sua fabricação e uso através de ferramentas de software e de simulação. No fim do projeto será implementado através de simulações um chip de computação quântica com três qubits.
+
+% %Principais técnicas de fabricação por software
+% %Caracterização dos dispositivos por programas de simulação
+% %Simulação de qubits e sua dinâmica.
+
+
+% %Objetivo final: implementar um chip para computação quântica com 3 qubits.
+
+% \section{Conclusão}
